@@ -1,0 +1,346 @@
+    :root {
+      --bg-gradient-1: #EBF2FC;
+      --bg-gradient-2: #EEF8F9;
+
+      --head-bg-color: #fbfdfeff;
+      --top-button-bg-color: #fbfdfeff;
+      --grid-item-bg-color: #fbfdfeff;
+      --remove-text-color-hover: #fbfdfeff;
+      --remove-bg-color: #fbfdfeff;
+      --mode-bg-color: #edededff;
+      --top-button-bg-color-hover: #d6e2f5ff;
+      --grid-item-border-color: #d6e2f5ff;
+      --remove-border-color: #d6e2f5ff;
+      --mode-bg-color-hover: #c7c7c7ff;
+      --top-button-text-color: #212636ff;
+      --grid-item-text-color: #212636ff;
+      --logo-text-color: #212636ff;
+      --remove-text-color: #212636ff;
+      --top-content-color: #09153eff;
+      --switch-bg-color: #c7c7c7ff;
+
+      --top-button-bg-color-active: #de473fff;
+      --top-button-text-color-active: #fbfdfeff;
+    }
+    body.dark{
+      --bg-gradient-1: #040918;
+      --bg-gradient-2: #091540;
+
+      --top-button-bg-color: #212636ff;
+      --head-bg-color: #212636ff;
+      --remove-text-color-hover: #212636ff;
+      --grid-item-bg-color: #212636ff;
+      --remove-bg-color: #212636ff;
+      --mode-bg-color: #2f364bff;
+      --mode-bg-color-hover: #545969ff;      
+      --top-button-bg-color-hover: #545969ff;
+      --grid-item-border-color: #545969ff;
+      --switch-bg-color: #545969ff;
+      --remove-border-color: #545969ff;
+      --remove-text-color: #fbfdfeff;
+      --logo-text-color: #fbfdfeff;
+      --top-content-color: #fbfdfeff;
+      --top-button-text-color: #fbfdfeff;
+      --grid-item-text-color: #fbfdfeff;
+
+      --top-button-bg-color-active: #de473fff;
+      --top-button-text-color-active: #09153eff;
+      
+    }
+    html, body,
+    button,
+    .card,
+    .grid-item,
+    .switch_control,
+    .modeicon img,
+    .top-button button {
+      transition: color 0.4s ease,
+                  background-color 0.4s ease,
+                  border-color 0.4s ease,
+                  filter 0.4s ease;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180deg, var(--bg-gradient-1), var(--bg-gradient-2));
+      overflow: hidden;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .head {
+      background-color: var(--head-bg-color);
+      border-radius: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 10px;
+      width: 75%;
+      justify-self: center;
+    }
+    .logo-site {
+      margin: 5px;
+      fill: var(--logo-text-color);
+      white-space: nowrap;
+      margin-left: 15px;
+      display: flex;
+      align-self: center;
+    }
+    .mode {
+      background-color: var(--mode-bg-color);
+      height: 40px;
+      width: 40px;
+      margin: 8px;
+      border-radius: 11px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border: none;
+    }
+    .modeicon {
+      display: flex;
+      align-self: center;
+      width: 22px;
+      height: 22px;
+    }
+    .mode:hover {
+      background-color: var(--mode-bg-color-hover);
+      cursor: pointer;
+    }
+    .mode:focus {
+      outline: 2px solid #F45B55;
+      outline-offset: 2px;
+    }
+    .top-content {
+      width: 75%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      justify-self: center;
+      margin-top: 50px;
+    }
+    @font-face {
+      font-family: 'NotoSans';
+      src: url('./assets/fonts/static/NotoSans-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'NotoSansMedium';
+      src: url('./assets/fonts/static/NotoSans-Medium.ttf') format('truetype');
+      font-weight: bolder;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'NotoSansBold';
+      src: url('./assets/fonts/static/NotoSans-Bold.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+    }
+    .top-content p {
+      color: var(--top-content-color);
+      font-family: 'NotoSansBold', sans-serif;
+      font-size:30px;
+    }
+    .top-button {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-self: center;
+    }
+    .top-button button {
+      font-family: 'NotoSansMedium', sans-serif;
+      margin: 5px;
+      background-color: var(--top-button-bg-color);
+      border-radius: 20px;
+      border: none;
+      height: 20px;
+      color: var(--top-button-text-color);
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid var(--remove-border-color) 1px;
+    }
+    .top-button button:hover {
+      background-color: var(--top-button-bg-color-hover);
+      cursor: pointer;
+    }
+    .top-button button.active {
+      background-color: var(--top-button-bg-color-active);
+      color: var(--top-button-text-color-active);
+      border-color: var(--top-button-bg-color-active);
+    }
+    .top-button button:focus {
+      outline: 2px solid #F45B55;
+      outline-offset: 2px;
+    }
+    .grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      padding: 10px;
+      width: 75%;
+      justify-self: center;
+      overflow-y: auto;
+      max-height: 55vh;
+      scrollbar-width: none;
+    }
+    .grid-item {
+      background-color: var(--grid-item-bg-color);
+      border-radius: 10px;
+      border: solid var(--grid-item-border-color) 0.1px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 23vh;
+    }
+    .grid-item-top {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      align-items: flex-start;
+    }
+    .grid-item-top-text {
+      display: flex;
+      flex-direction: column;
+      color: var(--grid-item-text-color);
+      vertical-align: top;
+      margin-left: 5px;
+    }
+    .grid-item-name {      
+      font-family: 'NotoSansBold', sans-serif;
+      margin: 0;
+    }
+    .grid-item-description {
+      font-family: 'NotoSans', sans-serif;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin: 3px 0 0 0;
+    }
+    .btns {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 10px;
+      align-items: flex-start;
+    }
+    .grid-item-remove {
+      border-radius: 20px;
+      background-color: var(--remove-bg-color);
+      border: solid var(--remove-border-color) 0.1px;
+      color: var(--remove-text-color);
+      display: flex;
+      align-self: flex-end;
+      padding: 7px;
+      padding-left: 10px;
+      padding-right: 10px;
+      cursor: pointer;
+    }
+    .grid-item-remove:hover {
+      background-color: #de473fff;
+      border: #de473fff solid 0.1px;
+      color: var(--remove-text-color-hover);
+    }
+    .grid-item-remove:focus {
+      outline: 2px solid #F45B55;
+      outline-offset: 2px;
+    }
+    :root {
+      --switch-width: 40px;
+      --switch-height: calc(var(--switch-width)/1.8);
+      --switch-border-radius: calc(var(--switch-height)/2);
+      --switch-bg-active-color: #de473fff;
+      --switch-dot-color: #fbfdfeff;
+    }
+    .switch {
+      display: inline-block;
+      cursor: pointer;
+      align-self: flex-end;
+    }
+    .switch_input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .switch_control:focus {
+      outline: 2px solid #F45B55;
+      outline-offset: 2px;
+    }
+    .switch_input:checked + .switch_control{
+      background-color: var(--switch-bg-active-color);
+    }
+    .switch_input:checked + .switch_control::after {
+      transform: translateX(80%) scale(0.8);
+    }
+    .switch_control {
+      position: relative;
+      height: var(--switch-height);
+      width: var(--switch-width);
+      border-radius: var(--switch-border-radius);
+      background-color: var(--switch-bg-color);
+      transition: background-color 250ms ease;
+    }
+    .switch_control::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: var(--switch-height);
+      height: 100%;
+      border-radius: var(--switch-border-radius);
+      transform: scale(0.8);
+      background-color: var(--switch-dot-color);
+      transition: transform 250ms ease;
+    }
+    @media (max-width: 600px) {
+      :root {
+        --switch-width: 50px;
+      }
+      .head {
+        width: 90%;
+      }
+      .top-content {
+        flex-direction: column;
+        width: 85%;
+        margin-top: 0px;
+      }
+      .top-content p {
+        align-self: center;
+      }
+      .top-button { 
+        height: 50px;       
+        width: 100%;        
+        justify-content: space-evenly;
+        margin-bottom: 5px;
+      }
+      .top-button button {
+        font-size: 25px;
+        padding: 20px;
+      }
+      .grid {
+        width: 90%;
+        max-height: 70vh;
+      }
+      .grid-item {        
+        height: 17vh;
+      }
+      .grid-item-top img {
+        height: 80px;
+        width: 80px;
+      }
+      .grid-item-name {
+        font-size: larger;
+      }
+      .grid-item-description {
+        font-size: large;
+      }
+      .grid-item-remove {
+        height: 40px;
+        font-size: larger;
+      }
+    }
