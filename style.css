@@ -326,10 +326,11 @@
       }
       .grid {
         width: 90%;
-        max-height: 71vh;
+        height: auto;
       }
       .grid-item {        
-        height: 17vh;
+        height: auto;
+        min-height: 150px;
       }
       .grid-item-top img {
         height: 80px;
